@@ -34,12 +34,13 @@ MyCustomApp.getInitialProps = async (
   // ownProps { prop1: [Function: withSuperJSON], prop2: 'bar', prop3: 'baz' }
   console.log("ownProps", ownProps);
 
+  // doesn't work
   return { ...ctx, ...ownProps };
 
-  // this works but the above return doesn't...
+  // works
   // return { ...ctx, prop1: "foo", prop2: "bar", prop3: "baz" };
 
-  // this also works
+  // works
   // const result = { ...ctx, prop1: "foo", prop2: "bar", prop3: "baz" };
   // return result;
 };
